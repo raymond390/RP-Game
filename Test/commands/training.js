@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("sorry jij kan dit niet");
+    if (!message.member.hasPermission("MANAGE_EMOJIS")) return message.reply("sorry jij kan dit niet");
 
      dienst = args[0];
      type = args[1];
@@ -25,7 +25,7 @@ module.exports.run = async (client, message, args) => {
     .setColor("#f00c0c")
     .setTimestamp()
     .addFields(
-        {name:" ** Training **" , value:(dienst)},
+        {name:" ** Dienst **" , value:(dienst)},
         {name:" ** Type-Training **" , value: (type) },
         {name:" ** Host **" , value:` ${message.author} `},
         {name:" ** Co-Host **" , value: (co) },
