@@ -2,60 +2,60 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    // sps m4a1, siper, clock
+    // sps steen, papier, schaar
 
-    if (!args[0]) return message.reply("Gebruik sps <colt, sniper, clock>");
+    if (!args[0]) return message.reply("Gebruik sps <steen, paapier, schaar>");
 
-    var options = ["colt", "sniper", "clock"];
+    var options = ["steen", "papier", "schaar"];
 
     var result = options[Math.floor(Math.random() * options.length)];
 
-    if (args[0].toUpperCase() == "COLT") {
+    if (args[0].toUpperCase() == "STEEN") {
 
-        if (result == "sniper") {
+        if (result == "papier") {
 
-            return message.channel.send(`Ik heb ${result} , Ik win`);
+            return message.channel.send(`Ik heb ${result} :notepad_spiral:, Ik win`);
 
-        } else if (result == "clock") {
+        } else if (result == "schaar") {
 
-            return message.channel.send(`Ik heb ${result} , Jij wint`);
+            return message.channel.send(`Ik heb ${result} :scissors:, Jij wint`);
 
-        } else if (result == "colt") {
+        } else if (result == "steen") {
 
-            return message.channel.send(`Ik heb ${result} , Het is gelijkspel`);
+            return message.channel.send(`Ik heb ${result} :moyai:, Het is gelijkspel`);
 
         }
 
     }
-    else if (args[0].toUpperCase() == "SNIPER") {
+    else if (args[0].toUpperCase() == "PAPIER") {
 
-        if (result == "clock") {
+        if (result == "schaar") {
 
-            return message.channel.send(`Ik heb ${result} , Ik win`);
+            return message.channel.send(`Ik heb ${result} :scissors:, Ik win`);
 
-        } else if (result == "colt") {
+        } else if (result == "steen") {
 
-            return message.channel.send(`Ik heb ${result} , Jij wint`);
+            return message.channel.send(`Ik heb ${result} :moyai:, Jij wint`);
 
-        } else if (result == "sniper") {
+        } else if (result == "papier") {
 
-            return message.channel.send(`Ik heb ${result} , Het is gelijkspel`);
+            return message.channel.send(`Ik heb ${result} :notepad_spiral:, Het is gelijkspel`);
 
         }
 
-    } else if (args[0].toUpperCase() == "CLOCK") {
+    } else if (args[0].toUpperCase() == "SCHAAR") {
 
-        if (result == "colt") {
+        if (result == "steen") {
 
-            return message.channel.send(`Ik heb ${result} , Ik win`);
+            return message.channel.send(`Ik heb ${result} :moyai:, Ik win`);
 
-        } else if (result == "sniper") {
+        } else if (result == "papier") {
 
-            return message.channel.send(`Ik heb ${result} , Jij wint`);
+            return message.channel.send(`Ik heb ${result} :notepad_spiral:, Jij wint`);
 
-        } else if (result == "clock") {
+        } else if (result == "schaar") {
 
-            return message.channel.send(`Ik heb ${result} , Het is gelijkspel`);
+            return message.channel.send(`Ik heb ${result} :scissors:, Het is gelijkspel`);
 
         }
 
@@ -64,7 +64,7 @@ module.exports.run = async (client, message, args) => {
 }
 
 module.exports.help = {
-    name: "oorlog",
-    description: "doe .oorlog colt,sniper,clock",
-     category: "Informatie"
+    name: "sps",
+    description: "",
+    category: ""
 }

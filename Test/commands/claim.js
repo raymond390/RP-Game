@@ -33,5 +33,5 @@ return message.channel.send(botEmbed);
 module.exports.help = {
     name: "claim",
     description: "Geeft al de verschillende commands",
-    category: "Informatie"
+    category: "Algemeen"
 }
