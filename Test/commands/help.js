@@ -31,7 +31,7 @@ module.exports.run = async (client, message, args) => {
     });
 
     var response = "\n\n";          //normaal bot commands
-    var general = "\n";
+    var general = "\nAdmin Commands";
     var info = "\n**Bot commands**\n";           // normaal informatie
 
     for (let i = 0; i < commandList.length; i++) {
