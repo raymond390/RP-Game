@@ -3,7 +3,7 @@ const discord = require("discord.js");
 module.exports.run = async (client, message, args) => {
 
     var serverEmbed = new discord.MessageEmbed()
-            .setTitle("Defensie")
+            .setTitle("RP_Game")
             .setDescription("")
             .setColor("#660066")
             .addField("Bot naam", client.user.username)

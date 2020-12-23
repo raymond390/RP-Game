@@ -11,17 +11,17 @@ module.exports.run = async (client, message, args) => {
      tijd = args[4];
      var opmerking = args.slice(5).join(" ");
    
-    if (!args[0]) return message.reply("dienst-type-co host-datum-tijd-opmerkingen");
-    if (!args[1]) return message.reply("dienst-type-co host-datum-tijd-opmerkingen");
-    if (!args[2]) return message.reply("dienst-type-co host-datum-tijd-opmerkingen");
-    if (!args[3]) return message.reply("dienst-type-co host-datum-tijd-opmerkingen");
-    if (!args[4]) return message.reply("dienst-type-co host-datum-tijd-opmerkingen");
-    if (!args[5]) return message.reply("dienst-type-co host-datum-tijd-opmerkingen.");
+    if (!args[0]) return message.reply(" Dientst type co host datum tijd opmerkingen");
+    if (!args[1]) return message.reply(" Dientst type co host datum tijd opmerkingen");
+    if (!args[2]) return message.reply(" Dientst type co host datum tijd opmerkingen");
+    if (!args[3]) return message.reply(" Dientst type co host datum tijd opmerkingen");
+    if (!args[4]) return message.reply(" Dientst type co host datum tijd opmerkingen");
+    if (!args[5]) return message.reply(" Dientst type co host datum tijd opmerkingen");
    
    
     var botEmbed = new discord.MessageEmbed()
     
-    .setTitle('Defensie')
+    .setTitle('Training')
     .setColor("#f00c0c")
     .setTimestamp()
     .addFields(
@@ -34,9 +34,9 @@ module.exports.run = async (client, message, args) => {
         {name:" ** Opmerking **" , value:` ${opmerking}`},
                 
     )
-    .setThumbnail('https://yt3.ggpht.com/a/AGF-l7_P42jUnWAoIvDDHzQH27EIOs5hAoDAwfdgug=s900-c-k-c0xffffffff-no-rj-mo')
-    .setImage('https://www.defensie.nl/binaries/large/content/gallery/defensie/content-afbeeldingen/organisatie/marechaussee/otc/foto-website-1.jpg')
-    .setFooter('Defensie', '');
+    .setThumbnail('')
+    .setImage('')
+    .setFooter('', '');
 
     var channel = message.member.guild.channels.cache.get("789495285176467496");
 
@@ -47,6 +47,6 @@ module.exports.run = async (client, message, args) => {
 
 module.exports.help = {
     name: "training",
-    description: ".training Type-type-co host-datum-tijd-opmerkingen",
+    description: ".training Dientst type co host datum tijd opmerkingen",
     category: "Informatie"
 }

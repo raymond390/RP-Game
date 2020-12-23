@@ -14,10 +14,10 @@ module.exports.run = async (client, message, argument) => {
     var botEmbed = new discord.MessageEmbed()
     .setTitle('Claim')
     .setDescription(`${message.author} Heeft deze ticket Geclaimed`)
-    .setThumbnail('https://yt3.ggpht.com/a/AGF-l7_P42jUnWAoIvDDHzQH27EIOs5hAoDAwfdgug=s900-c-k-c0xffffffff-no-rj-mo')
+    .setThumbnail('')
     .setImage('')
     .setTimestamp()
-    .setFooter('Defensie', '');
+    .setFooter('Hoi', '');
 
     
 
