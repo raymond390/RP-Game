@@ -35,7 +35,7 @@ module.exports.run = async (client, message, args) => {
                 
     )
     .setThumbnail('')
-    .setImage('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Df-WvltOZqNU&psig=AOvVaw19yltKCa-f0V4wNxDtSU6V&ust=1608834887115000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIiEnJjf5O0CFQAAAAAdAAAAABAD')
+    .setImage('https://i.ytimg.com/vi/f-WvltOZqNU/maxresdefault.jpg')
     .setFooter('', '');
 
     var channel = message.member.guild.channels.cache.get("791366711495360522");
