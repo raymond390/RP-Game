@@ -39,7 +39,7 @@ module.exports.run = async (client, message, args) => {
         newbadges.push(m.replace("_", " "))
       })
   
-      let embed = new MessageEmbed()
+      var embed= new discord.MessageEmbed()
         .setThumbnail(user.user.displayAvatarURL({ dynamic: true }))
   
       //ACTIVITY
