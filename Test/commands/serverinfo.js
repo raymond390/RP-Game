@@ -2,8 +2,6 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    this.channels = new GuildChannelManager(this);
-
     var serverEmbed = new discord.MessageEmbed()
             .setTitle("RP_Game")
             .setDescription("")
@@ -11,7 +9,6 @@ module.exports.run = async (client, message, args) => {
             .addField("Bot naam", client.user.username)
             .addField("Je bent deze server gejoind op", message.member.joinedAt)
             .addField("Totaal memebers", message.guild.memberCount)
-            .addField("Kanalen", message.guild.channels)
 
         return message.channel.send(serverEmbed);
 
