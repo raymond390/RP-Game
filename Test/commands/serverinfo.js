@@ -2,6 +2,8 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
+    this.channels = new GuildChannelManager(this);
+
     var serverEmbed = new discord.MessageEmbed()
             .setTitle("RP_Game")
             .setDescription("")
