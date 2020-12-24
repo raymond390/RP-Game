@@ -7,11 +7,12 @@ module.exports.run = async (client, message, args) => {
     .setColor("RANDOM")
     .setTitle("Server Info")
     .setImage(message.guild.iconURL)
-    .setDescription(`${message.guild}'s information`)
-    .addField("Owner", `The owner of this server is ${message.guild.owner}`)
-    .addField("Member Count", `This server has ${message.guild.memberCount} members`)
+    .setDescription(`${message.guild}'s Informatie`)
+    .addField("Creator", `De Creator Van deze server is ${message.guild.owner}`)
+    .addField("Spelers", `This server has ${message.guild.memberCount} members`)
     .addField("Emoji Count", `This server has ${message.guild.emojis.cache.size} emojis`)
-    .addField("Roles Count", `This server has ${message.guild.roles.cache.map(r => `${r}`).join(" | ")} `)
+    .addField("Rollen", `Deze Server Heeft ${message.guild.roles.cache.map(r => `${r}`).join(" | ")} `)
+    .addField("kanalen", `${message.guild.channels.cache.size}`)
     
 
 message.channel.send(serverEmbed)
