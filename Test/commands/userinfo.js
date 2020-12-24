@@ -3,7 +3,7 @@ const discord = require("discord.js");
 module.exports.run = async (client, message, args) => {
 
   
-    let embed = new Discord.MessageEmbed()
+    var serverEmbed = new discord.MessageEmbed()
     .setColor("RANDOM")
     .setTitle("Server Info")
     .setImage(message.guild.iconURL)
@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) => {
     .addField("Roles Count", `This server has ${message.guild.roles.cache.size} roles`)
     
 
-message.channel.send(embed)
+message.channel.send(serverEmbed)
   
 }
     
