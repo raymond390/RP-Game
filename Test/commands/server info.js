@@ -3,7 +3,7 @@ const discord = require("discord.js");
 module.exports.run = async (client, message, args) => {
 
     const embed = new discord.MessageEmbed()
-    .setTitle("Server Info!" + msg.guild.name)
+    .setTitle("Server Info!")
     .setThumbnail(msg.guild.iconURL())
     .setColor("RED")
     .addFields(
