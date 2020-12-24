@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
     .addField("Owner", `The owner of this server is ${message.guild.owner}`)
     .addField("Member Count", `This server has ${message.guild.memberCount} members`)
     .addField("Emoji Count", `This server has ${message.guild.emojis.cache.size} emojis`)
-    .addField("Roles Count", `This server has ${message.guild.roles.cache.size} roles`)
+    .addField("Roles Count", `This server has ${message.guild.roles.cache.map(r => `${r}`).join(" | ")} `)
     
 
 message.channel.send(serverEmbed)
@@ -19,7 +19,7 @@ message.channel.send(serverEmbed)
 }
     
     module.exports.help = {
-        name: "userinfo",
+        name: "info",
         description: "Geeft al de verschillende commands",
         category: "Informatie"
     }
