@@ -47,7 +47,7 @@ module.exports.run = async (client, message, args) => {
 
     channel.send(embed);
 
-    if (warns[warnUser.id].warns == 3) {
+    if (warns[warnUser.id].warns == 2) {
 
         var embed = new discord.MessageEmbed()
             .setColor("#ff0000")
@@ -56,9 +56,9 @@ module.exports.run = async (client, message, args) => {
 
         message.channel.send(embed);
 
-    } else if (warns[warnUser.id].warns == 1) {
+    } else if (warns[warnUser.id].warns == 3) {
         message.guild.member(warnUser).ban(reason);
-        message.channel.send(`${warnUser} is verbannen door de bot wegens te veel warns`);
+        message.channel.send(`${warnUser} Deze Gebruiker heeft te veel warns `);
     }
 }
 
