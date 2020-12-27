@@ -35,7 +35,7 @@ module.exports.run = async (client, message, args) => {
                 
     )
     .setThumbnail('')
-    .setImage('https://i.ytimg.com/vi/f-WvltOZqNU/maxresdefault.jpg')
+    .setImage('https://images3.persgroep.net/rcs/BIBZ--XOMQel0lovkJYiJyaFU88/diocontent/13826445/_fitwidth/1240?appId=93a17a8fd81db0de025c8abd1cca1279&quality=0.9')
     .setFooter('', '');
 
     var channel = message.member.guild.channels.cache.get("791366711495360522");

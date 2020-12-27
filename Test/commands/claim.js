@@ -20,7 +20,7 @@ module.exports.run = async (client, message, argument) => {
     .setTimestamp()
     .setFooter('Hoi', '');
 
-    message.channel.setTopic(` ${claim}: Heeft deze ticket geclaimed`)    
+    message.channel.setTopic(` ${message.author}: Heeft deze ticket geclaimed`)    
 
 return message.channel.send(botEmbed);
 
