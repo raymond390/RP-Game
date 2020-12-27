@@ -20,7 +20,7 @@ message.channel.send(serverEmbed)
 }
     
     module.exports.help = {
-        name: "info",
+        name: "serverinfo",
         description: "Geeft al de verschillende commands",
         category: "Informatie"
     }
