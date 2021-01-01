@@ -4,7 +4,7 @@ module.exports.run = async (client, message, args) => {
 
 
     
-        const categoryID = "792756429869678613";
+        const categoryID = "794636091880767539";
         var staff = "790291727889858570";
         var person = message.author;
 
@@ -15,13 +15,7 @@ module.exports.run = async (client, message, args) => {
     
         message.guild.channels.cache.forEach(channel => {
     
-            if (channel.name == userName.toLowerCase() + "-" + userDiscriminator) {
-                ticketBestaat = true;
-    
-                message.reply("Je hebt al een ticket aangemaakt");
-    
-                return;
-            }
+        
     
         });
     
