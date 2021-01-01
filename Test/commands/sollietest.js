@@ -4,7 +4,7 @@ module.exports.run = async (client, message, args) => {
 
 
     
-        const categoryID = "794629744767401985";
+        const categoryID = "792756429869678613";
         var staff = "790291727889858570";
         var person = message.author;
 
