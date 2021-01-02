@@ -13,14 +13,14 @@ module.exports.run = async (client, message, argument) => {
     if (message.channel.parentID == categoryID) {
 
     var botEmbed = new discord.MessageEmbed()
-    .setTitle('Claim')
-    .setDescription(`${message.author} Heeft deze ticket Geclaimed`)
+    .setTitle('Unclaim')
+    .setDescription(`${message.author} Heeft deze ge unclaimed`)
     .setThumbnail('')
     .setImage('')
     .setTimestamp()
-    .setFooter('claim', '');
+    .setFooter('Unclaim', '');
 
-    message.channel.setTopic(` ${message.author}: Heeft deze ticket geclaimed`)    
+    message.channel.setTopic(` Deze ticket is niet geclaimed!!!`)    
 
 return message.channel.send(botEmbed);
 
@@ -32,7 +32,7 @@ return message.channel.send(botEmbed);
 }
 
 module.exports.help = {
-    name: "claim",
+    name: "unclaim",
     description: "Geeft al de verschillende commands",
     category: "Algemeen"
 }
