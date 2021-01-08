@@ -58,31 +58,10 @@ client.on("message", async message => {
 
 client.on("guildMemberAdd", member => {
 
-     var role = member.guild.roles.cache.get('462166173690232842');
-
-     if (!role) return;
-
-     member.roles.add(role);
+     
 
 
-    con.query(`SELECT IDRole FROM rollen WHERE IDUser = '${member.user.id}'`, (err, rows) => {
-
-        if (err) throw err;
-
-        if (rows.length > 0) {
-
-            for (let index = 0; index < rows.length; index++) {
-                const role = rows[index];
-
-                member.roles.add(role.IDRole);
-            }
-
-        }
-
-    });
-
-
-    var channel = member.guild.channels.cache.get('778300362607951912');
+    var channel = member.guild.channels.cache.get('784428322838937690');
 
     if (!channel) return;
 
@@ -102,7 +81,7 @@ client.on("guildMemberAdd", member => {
 
 client.on("guildMemberRemove", member => {
 
-    var channel = member.guild.channels.cache.get('778300362607951912');
+    var channel = member.guild.channels.cache.get('784428322838937690');
 
     if (!channel) return;
 
@@ -118,9 +97,9 @@ client.on("guildMemberRemove", member => {
 
 
 const activities_list = [
-    "DSI V3", 
+    "Maastricht V1", 
     ".help",
-    "DSI V3", 
+    "Maastricht V1", 
     ".help"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
     

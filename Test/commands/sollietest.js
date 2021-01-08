@@ -91,7 +91,7 @@ module.exports.run = async (client, message, args) => {
                     var vraag7 = new discord.MessageEmbed()
                         .setTitle("sollicitatie vraag 8")
                         .setColor("#00BFFF")
-                        .setDescription(" welke eenheid wil je? (luchtmacht/landmacht/korps-mariniers/KMAR)");
+                        .setDescription(" welke eenheid wil je? (DSI/Ambulance/politie)");
 
                      var vraag8 = new discord.MessageEmbed()
                         .setTitle("sollicitatie vraag 9")
@@ -154,10 +154,10 @@ module.exports.run = async (client, message, args) => {
                                              .setTitle("Bedankt voor het solliciteren")
                                              .setColor("#00FF00")
                                              .setTimestamp()
-                                             .setDescription(`**wat is je roblox naam**: \n${antwoord0}\n\n**hoe oud ben je?**: \n${antwoord1}\n\n**ben je bekend met admin?**: \n${antwoord2}\n\n**wat is AA**: \n${antwoord3}\n\n**wat doe je als je een HR ziet abusen?**:\n${antwoord4}\n\n**wat doe je als je een HC ziet abusen?**: \n${antwoord5}\n\n**wat doe je als er een hacker in de game zit?**: \n${antwoord6}\n\n**welke eenheid wil je? (luchtmacht/landmacht/korps-mariniers/KMAR)**\n${antwoord7}\n\n**hoe actief ben jij op een schaal van 1 tot 10?**\n${antwoord8}\n\n**moeten wij nog iets van je weten?**\n${antwoord9}`)
+                                             .setDescription(`**wat is je roblox naam**: \n${antwoord0}\n\n**hoe oud ben je?**: \n${antwoord1}\n\n**ben je bekend met admin?**: \n${antwoord2}\n\n**wat is AA**: \n${antwoord3}\n\n**wat doe je als je een HR ziet abusen?**:\n${antwoord4}\n\n**wat doe je als je een HC ziet abusen?**: \n${antwoord5}\n\n**wat doe je als er een hacker in de game zit?**: \n${antwoord6}\n\n**welke eenheid wil je? (DSI/Ambulance/politie)**\n${antwoord7}\n\n**hoe actief ben jij op een schaal van 1 tot 10?**\n${antwoord8}\n\n**moeten wij nog iets van je weten?**\n${antwoord9}`)
                                          
      
-                                             settedParent.bulkDelete(14).then(
+                                             settedParent.bulkDelete(20).then(
                                                  settedParent.send(uitkomst)
                                              )
                                          })
