@@ -93,6 +93,11 @@ module.exports.run = async (client, message, args) => {
                         .setColor("#00BFFF")
                         .setDescription(" welke eenheid wil je? (DSI/Ambulance/politie)");
 
+                    var vraags = new discord.MessageEmbed()
+                        .setTitle("sollicitatie vraag 9")
+                        .setColor("#00BFFF")
+                        .setDescription("wat is je motivatie [50woorden]");
+
                      var vraag8 = new discord.MessageEmbed()
                         .setTitle("sollicitatie vraag 9")
                         .setColor("#00BFFF")
@@ -138,14 +143,18 @@ module.exports.run = async (client, message, args) => {
                                                 
                                                 settedParent.awaitMessages(s => s.author.id == message.author.id, {max: 1}).then(antwoord => {
                                                     var antwoord7 = antwoord.first();;
-                                                    settedParent.send(vraag8);
+                                                    settedParent.send(vraags);
 
                                                     settedParent.awaitMessages(s => s.author.id == message.author.id, {max: 1}).then(antwoord => {
                                                         var antwoord8 = antwoord.first();;
-                                                        settedParent.send(vraag9);
+                                                        settedParent.send(vraag8);
                                              
-                                                    settedParent.awaitMessages(s => s.author.id == message.author.id, {max: 1}).then(antwoord => {
-                                                        var antwoord9 = antwoord.first();;
+                                                        settedParent.awaitMessages(s => s.author.id == message.author.id, {max: 1}).then(antwoord => {
+                                                            var antwoord9 = antwoord.first();;
+                                                            settedParent.send(vraag9);
+
+                                                            settedParent.awaitMessages(s => s.author.id == message.author.id, {max: 1}).then(antwoord => {
+                                                                var antwoord10 = antwoord.first();;
                                                         
 
                                              
@@ -154,7 +163,7 @@ module.exports.run = async (client, message, args) => {
                                              .setTitle("Bedankt voor het solliciteren")
                                              .setColor("#00FF00")
                                              .setTimestamp()
-                                             .setDescription(`**wat is je roblox naam**: \n${antwoord0}\n\n**hoe oud ben je?**: \n${antwoord1}\n\n**ben je bekend met admin?**: \n${antwoord2}\n\n**wat is AA**: \n${antwoord3}\n\n**wat doe je als je een HR ziet abusen?**:\n${antwoord4}\n\n**wat doe je als je een HC ziet abusen?**: \n${antwoord5}\n\n**wat doe je als er een hacker in de game zit?**: \n${antwoord6}\n\n**welke eenheid wil je? (DSI/Ambulance/politie)**\n${antwoord7}\n\n**hoe actief ben jij op een schaal van 1 tot 10?**\n${antwoord8}\n\n**moeten wij nog iets van je weten?**\n${antwoord9}`)
+                                             .setDescription(`**wat is je roblox naam**: \n${antwoord0}\n\n**hoe oud ben je?**: \n${antwoord1}\n\n**ben je bekend met admin?**: \n${antwoord2}\n\n**wat is AA**: \n${antwoord3}\n\n**wat doe je als je een HR ziet abusen?**:\n${antwoord4}\n\n**wat doe je als je een HC ziet abusen?**: \n${antwoord5}\n\n**wat doe je als er een hacker in de game zit?**: \n${antwoord6}\n\n**welke eenheid wil je? (DSI/Ambulance/politie)**\n${antwoord7}\n\nwat is je motivatie [50woorden]${antwoord8}\n\n**hoe actief ben jij op een schaal van 1 tot 10?**\n${antwoord9}\n\n**moeten wij nog iets van je weten?**\n${antwoord10}`)
                                          
      
                                              settedParent.bulkDelete(20).then(
@@ -171,7 +180,8 @@ module.exports.run = async (client, message, args) => {
             })
           })
         })
-        
+    })
+
                     }
                     
                 ).catch(err => {

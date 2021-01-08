@@ -126,7 +126,7 @@ client.on("messageDelete", messageDeleted => {
         .setTimestamp()
         .setColor("#FF0000");
 
-    client.channels.cache.find(c => c.name == "logs")
+    client.channels.cache.find(c => c.name == "「📖」staff-logs")
 
 });
 
