@@ -126,7 +126,11 @@ client.on("messageDelete", messageDeleted => {
         .setTimestamp()
         .setColor("#FF0000");
 
-    client.channels.cache.find(c => c.name == "「📖」staff-logs")
+        var channel = message.member.guild.channels.cache.get("784454324990115840");
+
+        if (!channel) return
+    
+        channel.send(embed);
 
 });
 
