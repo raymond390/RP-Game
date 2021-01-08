@@ -44,7 +44,7 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 
-client.on("message", async message => {
+client.on(message, async message => {
     if (message.author.bot) return;
 
     if (message.channel.id === config.CHANNEL_ID) {
@@ -56,7 +56,7 @@ client.on("message", async message => {
     }
 })
 
-client.on("guildMemberAdd", member => {
+client.on(guildMemberAdd, member => {
 
      
 
@@ -79,7 +79,7 @@ client.on("guildMemberAdd", member => {
 });
 
 
-client.on("guildMemberRemove", member => {
+client.on(guildMemberRemove, member => {
 
     var channel = member.guild.channels.cache.get('784428322838937690');
 
