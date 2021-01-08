@@ -65,7 +65,7 @@ client.on("guildMemberAdd", member => {
 
     if (!channel) return;
 
-    // channel.send(`Welkom bij de server ${member}`);
+     channel.send(`Welkom bij de server ${member}`);
 
     var joinEmbed = new discord.MessageEmbed()
         .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
