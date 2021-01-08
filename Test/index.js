@@ -58,11 +58,11 @@ client.on("message", async message => {
 
 client.on("guildMemberAdd", member => {
 
-     var role = member.guild.roles.cache.get('462166173690232842');
+    // var role = member.guild.roles.cache.get('462166173690232842');
 
-     if (!role) return;
+    // if (!role) return;
 
-     member.roles.add(role);
+    // member.roles.add(role);
 
 
     con.query(`SELECT IDRole FROM rollen WHERE IDUser = '${member.user.id}'`, (err, rows) => {
@@ -82,7 +82,7 @@ client.on("guildMemberAdd", member => {
     });
 
 
-    var channel = member.guild.channels.cache.get('778300362607951912');
+    var channel = member.guild.channels.cache.get('784428322838937690');
 
     if (!channel) return;
 
@@ -98,7 +98,6 @@ client.on("guildMemberAdd", member => {
     channel.send(joinEmbed);
 
 });
-
 
 client.on("guildMemberRemove", member => {
 

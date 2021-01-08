@@ -49,7 +49,7 @@ module.exports.run = async (client, message, args) => {
                         });
     
                     var embedParent = new discord.MessageEmbed()
-                        .setTitle("Hoi" + message.author.username)
+                        .setTitle("Hoi" +  message.author.username)
                         .setColor("#00BFFF")
                         .setDescription("Hier is u Sollictatie ");
 
