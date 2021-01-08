@@ -58,9 +58,12 @@ client.on("message", async message => {
 
 client.on("guildMemberAdd", member => {
 
-     
+    var role = member.guild.roles.cache.get('784455931832041472');
 
-
+    if (!role) return;
+    
+    members.roles.add(role);
+    
     var channel = member.guild.channels.cache.get('784428322838937690');
 
     if (!channel) return;
@@ -126,11 +129,7 @@ client.on("messageDelete", messageDeleted => {
         .setTimestamp()
         .setColor("#FF0000");
 
-        var channel = message.member.guild.channels.cache.get("784430428722298941");
-
-        if (!channel) return
-    
-        channel.send(embed);
+    client.channels.cache.find(c => c.name == "「📖」staff-logs")
 
 });
 
