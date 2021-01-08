@@ -44,7 +44,7 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 
-client.on(message, async message => {
+client.on("message", async message => {
     if (message.author.bot) return;
 
     if (message.channel.id === config.CHANNEL_ID) {
@@ -56,7 +56,7 @@ client.on(message, async message => {
     }
 })
 
-client.on(guildMemberAdd, member => {
+client.on("guildMemberAdd", member => {
 
      
 
@@ -65,7 +65,7 @@ client.on(guildMemberAdd, member => {
 
     if (!channel) return;
 
-     channel.send(`Welkom bij de server ${member}`);
+    // channel.send(`Welkom bij de server ${member}`);
 
     var joinEmbed = new discord.MessageEmbed()
         .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
@@ -79,7 +79,7 @@ client.on(guildMemberAdd, member => {
 });
 
 
-client.on(guildMemberRemove, member => {
+client.on("guildMemberRemove", member => {
 
     var channel = member.guild.channels.cache.get('784428322838937690');
 
@@ -126,7 +126,7 @@ client.on("messageDelete", messageDeleted => {
         .setTimestamp()
         .setColor("#FF0000");
 
-        var channel = message.member.guild.channels.cache.get("784454324990115840");
+        var channel = message.member.guild.channels.cache.get("784430428722298941");
 
         if (!channel) return
     
