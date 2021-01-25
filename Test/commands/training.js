@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
     .setThumbnail("")
     .setFooter('', '')
 
-settedParent.send(embedParent);
+    channel.send(embedParent);
 
 }
 
