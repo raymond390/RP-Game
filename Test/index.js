@@ -44,17 +44,7 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 
-client.on("message", async message => {
-    if (message.author.bot) return;
 
-    if (message.channel.id === config.CHANNEL_ID) {
-
-        message.channel.startTyping();
-        const response = await fetch(`https://some-random-api.ml/chatbot?message=${encodeURIComponent(message.content)}`)
-        const json = await response.json();
-        return message.channel.stopTyping(true);
-    }
-})
 
 client.on("guildMemberAdd", member => {
 
