@@ -4,7 +4,6 @@ const discord = require("discord.js");
 module.exports.run = async (client, message, args) => {
 
     if (!message.member.hasPermission("MANAGE_EMOJIS")) return message.reply("sorry jij kan dit niet");
-
      
      type = args[0];
      co = args[1];
@@ -22,11 +21,10 @@ module.exports.run = async (client, message, args) => {
    
     var botEmbed = new discord.MessageEmbed()
     
-    .setTitle('Training')
+    .setTitle('Politie Training')
     .setColor("#f00c0c")
     .setTimestamp()
     .addFields(
-        {name:" ** Dienst **" , value: Politie},
         {name:" ** Type-Training **" , value: (type) },
         {name:" ** Host **" , value:` ${message.author} `},
         {name:" ** Co-Host **" , value: (co) },
@@ -35,8 +33,8 @@ module.exports.run = async (client, message, args) => {
         {name:" ** Opmerking **" , value:` ${opmerking}`},
                 
     )
-    .setThumbnail('')
-    .setImage('https://media.discordapp.net/attachments/794609521757913099/803200830609817640/2048x1152.png')
+    .setThumbnail('http://www.kejara.nl/wp-content/uploads/2018/10/politie-logo.png')
+    .setImage('')
     .setFooter('', '');
 
     var channel = message.member.guild.channels.cache.get("784430428722298941");
@@ -48,6 +46,4 @@ module.exports.run = async (client, message, args) => {
 
 module.exports.help = {
     name: "trainingp",
-    description: ".trainingp type co host datum tijd opmerkingen",
-    category: "Algemeen"
 }
