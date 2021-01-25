@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
     .setColor("#000000")
     .setDescription(`Hier onder staat het commando uitgelegd
 
-    .training <TYPE> <CO-HOST> <SUPERVISOR> <DATUM> <TIJD> <OPMERKINGEN>`)
+.training <TYPE> <CO-HOST> <SUPERVISOR> <DATUM> <TIJD> <OPMERKINGEN>`)
     .setThumbnail("")
     .setFooter('', '')
 
