@@ -8,7 +8,6 @@ module.exports.run = async (client, message, args) => {
     var userDiscriminator = message.author.discriminator;
 
     var ticketBestaat = false;
-    var opmerking = args.slice(0).join(" ");
 
     message.guild.channels.cache.forEach(channel => {
 
@@ -49,10 +48,7 @@ module.exports.run = async (client, message, args) => {
                         .setTitle(`Hoi ${message.author.username}`)
                         .setDescription("Zet hier je bericht / vraag")
                         .setThumbnail("")
-                        .setFooter('', '')
-                        .addfields(
-                            {name:" **Onderwerp **" , value:` ${opmerking}`},
-                        );
+                        .setFooter('', '');
 
                     settedParent.send(embedParent);
                     
