@@ -47,6 +47,7 @@ module.exports.run = async (client, message, args) => {
                     var embedParent = new discord.MessageEmbed()
                         .setTitle(`Hoi ${message.author.username}`)
                         .setDescription(`Je kunt hier alvast je vragen/klachten uitleggen en dan zal er iemand naar je toe komen.
+        
                         **Onderwerp:** 
                         ${opmerking}`)
                         .setThumbnail("")
