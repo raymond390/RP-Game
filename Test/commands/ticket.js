@@ -3,7 +3,7 @@ const discord = require("discord.js");
 module.exports.run = async (client, message, args) => {
 
     const categoryID = "792756429869678613";
-
+    var opmerking = args.slice(0).join(" ");
     var userName = message.author.username;
     var userDiscriminator = message.author.discriminator;
 
@@ -46,7 +46,7 @@ module.exports.run = async (client, message, args) => {
 
                     var embedParent = new discord.MessageEmbed()
                         .setTitle(`Hoi ${message.author.username}`)
-                        .setDescription("Zet hier je bericht / vraag")
+                        .setDescription(`Onderwerp ${opmerking}`)
                         .setThumbnail("")
                         .setFooter('', '');
 
