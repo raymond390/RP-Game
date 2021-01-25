@@ -5,12 +5,12 @@ module.exports.run = async (client, message, args) => {
 
     if (!message.member.hasPermission("MANAGE_EMOJIS")) return message.reply("sorry jij kan dit niet");
      
-    type = args[0];
-    co = args[1];
-    supervisor = args[2];
-    datum = args[3];
-    tijd = args[4];
-    var opmerking = args.slice(5).join(" ");
+     type = args[0];
+     co = args[1];
+     supervisor = args[2];
+     datum = args[3];
+     tijd = args[4];
+     var opmerking = args.slice(5).join(" ");
    
     if (!args[0]) return message.reply(" type co-host supervisor datum tijd opmerkingen");
     if (!args[1]) return message.reply(" type co-host supervisor datum tijd opmerkingen");
@@ -19,10 +19,11 @@ module.exports.run = async (client, message, args) => {
     if (!args[4]) return message.reply(" type co-host supervisor datum tijd opmerkingen");
     if (!args[5]) return message.reply(" type co-host supervisor datum tijd opmerkingen");
    
+   
     var botEmbed = new discord.MessageEmbed()
     
-    .setTitle('Politie Training')
-    .setColor("#0033cc")
+    .setTitle('Defensie Training')
+    .setColor("#004d00")
     .setTimestamp()
     .addFields(
         {name:" ** Type-Training **" , value: (type) },
@@ -34,7 +35,7 @@ module.exports.run = async (client, message, args) => {
         {name:" ** Opmerking **" , value:` ${opmerking}`},
                 
     )
-    .setThumbnail('http://www.kejara.nl/wp-content/uploads/2018/10/politie-logo.png')
+    .setThumbnail('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Logo_rijksoverheid.svg/1200px-Logo_rijksoverheid.svg.png')
     .setImage('')
     .setFooter('', '');
 
@@ -46,5 +47,5 @@ module.exports.run = async (client, message, args) => {
 }
 
 module.exports.help = {
-    name: "trainingp",
+    name: "trainingdef",
 }
