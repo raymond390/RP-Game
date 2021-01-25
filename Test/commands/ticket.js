@@ -46,12 +46,10 @@ module.exports.run = async (client, message, args) => {
 
                     var embedParent = new discord.MessageEmbed()
                         .setTitle(`Hoi ${message.author.username}`)
-                        .setDescription(`**`)
+                        .setDescription(`**Onderwerp:** 
+                        ${opmerking}`)
                         .setThumbnail("")
                         .setFooter('', '')
-                        .addField(
-                          {name:" **Onderwerp **" , value:` ${opmerking}`},
-                        )
 
                     settedParent.send(embedParent);
                     
