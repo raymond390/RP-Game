@@ -25,13 +25,13 @@ module.exports.run = async (client, message, args) => {
     .setColor("#0033cc")
     .setTimestamp()
     .addFields(
-        {name:" ** Type-Training **" , value: (type) },
-        {name:" ** Host **" , value:` ${message.author} `},
-        {name:" ** Co-Host **" , value: (co) },
-        {name:" ** Supervisor **" , value: (supervisor) },
-        {name:" ** Datum **" , value: (datum) },
-        {name:" ** Tijd **" , value: (tijd) },
-        {name:" ** Opmerking **" , value:` ${opmerking}`},
+        {name:" **Type-Training **" , value: (type) },
+        {name:" **Host **" , value:` ${message.author} `},
+        {name:" **Co-Host **" , value: (co) },
+        {name:" **Supervisor **" , value: (supervisor) },
+        {name:" **Datum **" , value: (datum) },
+        {name:" **Tijd **" , value: (tijd) },
+        {name:" **Opmerking **" , value:` ${opmerking}`},
                 
     )
     .setThumbnail('http://www.kejara.nl/wp-content/uploads/2018/10/politie-logo.png')

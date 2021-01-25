@@ -26,13 +26,13 @@ module.exports.run = async (client, message, args) => {
     .setColor("#ffff00")
     .setTimestamp()
     .addFields(
-        {name:" ** Type-Training **" , value: (type) },
-        {name:" ** Host **" , value:` ${message.author} `},
-        {name:" ** Co-Host **" , value: (co) },
-        {name:" ** Supervisor **" , value: (supervisor) },
-        {name:" ** Datum **" , value: (datum) },
-        {name:" ** Tijd **" , value: (tijd) },
-        {name:" ** Opmerking **" , value:` ${opmerking}`},
+        {name:" **Type-Training **" , value: (type) },
+        {name:" **Host **" , value:` ${message.author} `},
+        {name:" **Co-Host **" , value: (co) },
+        {name:" **Supervisor **" , value: (supervisor) },
+        {name:" **Datum **" , value: (datum) },
+        {name:" **Tijd **" , value: (tijd) },
+        {name:" **Opmerking **" , value:` ${opmerking}`},
                 
     )
     .setThumbnail('https://www.logolynx.com/images/logolynx/87/87ce0c7ed02801e216a34732603d6433.jpeg')

@@ -26,13 +26,13 @@ module.exports.run = async (client, message, args) => {
     .setColor("#000099")
     .setTimestamp()
     .addFields(
-        {name:" ** Type-Training **" , value: (type) },
-        {name:" ** Host **" , value:` ${message.author} `},
-        {name:" ** Co-Host **" , value: (co) },
-        {name:" ** Supervisor **" , value: (supervisor) },
-        {name:" ** Datum **" , value: (datum) },
-        {name:" ** Tijd **" , value: (tijd) },
-        {name:" ** Opmerking **" , value:` ${opmerking}`},
+        {name:" **Type-Training **" , value: (type) },
+        {name:" **Host **" , value:` ${message.author} `},
+        {name:" **Co-Host **" , value: (co) },
+        {name:" **Supervisor **" , value: (supervisor) },
+        {name:" **Datum **" , value: (datum) },
+        {name:" **Tijd **" , value: (tijd) },
+        {name:" **Opmerking **" , value:` ${opmerking}`},
                 
     )
     .setThumbnail('https://www.deltahouten.nl/media/image/2e/49/64/coin-Kmar_600x600.png')
