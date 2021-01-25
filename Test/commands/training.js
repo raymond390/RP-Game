@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    var embedParent = new discord.MessageEmbed()
+    var botEmbed = new discord.MessageEmbed()
     .setTitle(`**Training Inplannen**`)
     .setColor("#000000")
     .setDescription(`Hier onder staat het commando uitgelegd
@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
     .setThumbnail("")
     .setFooter('', '')
 
-    channel.send(embedParent);
+    message.channel.send(botEmbed);
 
 }
 
