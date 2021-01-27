@@ -9,14 +9,14 @@ module.exports.run = async (client, message, args) => {
         const yellowTeamEmoji = '❤';
         const blueTeamEmoji = '👌';
  
-        let embed = new Discord.MessageEmbed()
+        var kiesEmbed = new discord.MessageEmbed()
             .setColor('#e42643')
             .setTitle('Choose a team to play on!')
             .setDescription('Choosing a team will allow you to interact with your teammates!\n\n'
                 + `${yellowTeamEmoji} for yellow team\n`
                 + `${blueTeamEmoji} for blue team`);
  
-        let messageEmbed = await message.channel.send(embed);
+        let messageEmbed = await message.channel.send(kiesEmbed);
         messageEmbed.react(yellowTeamEmoji);
         messageEmbed.react(blueTeamEmoji);
  
