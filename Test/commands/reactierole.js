@@ -13,8 +13,8 @@ module.exports.run = async (client, message, args) => {
             .setColor('#e42643')
             .setTitle('Choose a team to play on!')
             .setDescription('Choosing a team will allow you to interact with your teammates!\n\n'
-                + `${yellowTeamEmoji} for yellow team\n`
-                + `${blueTeamEmoji} for blue team`);
+                + `${yellowTeamEmoji} Niet storen\n`
+                + `${blueTeamEmoji} training`);
  
         let messageEmbed = await message.channel.send(kiesEmbed);
         messageEmbed.react(yellowTeamEmoji);
