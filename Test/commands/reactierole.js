@@ -3,8 +3,8 @@ const discord = require("discord.js");
 module.exports.run = async (client, message, args) => {
 
     const channel = '757998148969824379';
-        const yellowTeamRole = message.guild.roles.cache.find(role => role.name === "+");
-        const blueTeamRole = message.guild.roles.cache.find(role => role.name === "Moderator");
+        const yellowTeamRole = message.guild.roles.cache.find(role => role.name === "Niet storen");
+        const blueTeamRole = message.guild.roles.cache.find(role => role.name === "trainingen");
  
         const yellowTeamEmoji = '❤';
         const blueTeamEmoji = '👌';
