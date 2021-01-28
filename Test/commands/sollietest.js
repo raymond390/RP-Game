@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
         var userName = message.author.username;
         var userDiscriminator = message.author.discriminator;
     
-        var ticketBestaat = false;
+        var ticketBestaat = true;
     
         message.guild.channels.cache.forEach(channel => {
     
