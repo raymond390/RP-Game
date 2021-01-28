@@ -4,7 +4,7 @@ module.exports.run = async (client, message, args) => {
 
 
     
-        const categoryID = "799628426172563467";
+        const categoryID = "";
         var staff = "790291727889858570";
         var person = message.author;
 
@@ -185,11 +185,11 @@ module.exports.run = async (client, message, args) => {
                     }
                     
                 ).catch(err => {
-                    message.channel.send("Er is iets misgelopen");
+                    message.channel.send("De sollicitaties zijn dicht");
                 });
             }
         ).catch(err => {
-            message.channel.send("Er is iets misgelopen");
+            message.channel.send("De sollicitaties zijn dicht");
         });
     }
     
