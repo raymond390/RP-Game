@@ -11,7 +11,13 @@ module.exports.run = async (client, message, args) => {
 
     message.guild.channels.cache.forEach(channel => {
 
-       
+        if (channel.name == userName.toLowerCase() + "-" + userDiscriminator) {
+            ticketBestaat = true;
+
+            message.reply("Je hebt al een ticket aangemaakt");
+
+            return;
+        }
 
     });
 
