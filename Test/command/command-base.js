@@ -7,7 +7,7 @@
 
 const mongo = require('../mongo')
 const commandPrefixSchema = require('../schemas/command-prefix-schema')
-const { prefix: globalPrefix } = require('../config.json')
+const { prefix: globalPrefix } = require('../botconfig.json')
 const guildPrefixes = {} // { 'guildId' : 'prefix' }
 
 const validatePermissions = (permissions) => {
