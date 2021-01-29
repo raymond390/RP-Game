@@ -17,7 +17,8 @@ const { isFunction } = require("util");
 const client = new discord.Client();
 
 commandBase.loadPrefixes(client)
-
+const baseFile = 'command-base.js'
+const commandBase = require(`./commands${baseFile}`)
 
 //  Command handler
 client.commands = new discord.Collection();
