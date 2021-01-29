@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
 
     if (!message.guild.me.hasPermission("KICK_MEMBERS")) return message.reply("Geen perms");
     
-    const categoryID = "804717995569446942";
+    const categoryID = "804721055272140820";
 
     if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("sorry jij kan dit niet");
 
@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) => {
         // Create embed.
         var embedCreateTicket = new discord.MessageEmbed()
             .setTitle("Ticket, " + message.channel.name)
-            .setDescription("De ticket is gemarkeerd als **compleet**.")
+            .setDescription("De Sollicitatie is gemarkeerd als **compleet**.")
             .setFooter("Ticket gesloten");
 
         // Channel voor logging
@@ -27,7 +27,7 @@ module.exports.run = async (client, message, args) => {
 
     } else {
 
-        message.channel.send("Gelieve dit command te doen bij een ticket.");
+        message.channel.send("Gelieve dit command te doen bij een Sollicitatie.");
 
     }
 
