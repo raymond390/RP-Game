@@ -8,12 +8,15 @@ const activeSongs = new Map();
 const baseFile = 'command-base.js'
 const poll = require('./features/poll')
 const scaling = require('./features/scaling-channels')
+const commandBase = require('./command/command-base')
 //  Command handler
 const fs = require("fs");
 const { isFunction } = require("util");
 
 const client = new discord.Client();
 
+commandBase.loadPrefixes(client)
+loadCommands(client)
 
 //  Command handler
 client.commands = new discord.Collection();
@@ -44,7 +47,7 @@ const readCommands = (dir) => {
     }
   })
 
-client.login(process.env.token)
+client.login(botConfig.token)
 
 
 
