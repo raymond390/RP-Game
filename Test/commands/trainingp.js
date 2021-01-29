@@ -38,7 +38,7 @@ module.exports.run = async (client, message, args) => {
     .setImage('')
     .setFooter('', '');
 
-    var channel = message.member.guild.channels.cache.get("804064871901298698");
+    var channel = message.member.guild.channels.cache.get("804715375882928148");
 
     if (!channel) return
 

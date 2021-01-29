@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    var categoryID = "794636091880767539"
+    var categoryID = "804717995569446942"
 
     var ticketUser = message.guild.member(message.mentions.users.first());
 
