@@ -15,7 +15,13 @@ module.exports.run = async (client, message, args) => {
     
         message.guild.channels.cache.forEach(channel => {
     
-        
+            if (channel.name == userName.toLowerCase()) {
+                ticketBestaat = true;
+    
+                message.reply("Je hebt al een ticket aangemaakt");
+    
+                return;
+            }
     
         });
     
@@ -27,7 +33,7 @@ module.exports.run = async (client, message, args) => {
     
         message.channel.send(embed);
     
-        message.guild.channels.create(userName.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
+        message.guild.channels.create(userName.toLowerCase(), { type: 'text' }).then(
             (createdChannel) => {
                 createdChannel.setParent(categoryID).then(
                     (settedParent) => {
@@ -91,7 +97,7 @@ module.exports.run = async (client, message, args) => {
                     var vraag7 = new discord.MessageEmbed()
                         .setTitle("sollicitatie vraag 8")
                         .setColor("#00BFFF")
-                        .setDescription(" welke eenheid wil je? (DSI/Ambulance/politie/Brandweer/Kmar)");
+                        .setDescription(" welke eenheid wil je? (DSI/Ambulance/politie/Brandweer/Kmar/Defensie)");
 
                     var vraags = new discord.MessageEmbed()
                         .setTitle("sollicitatie vraag 9")
@@ -163,7 +169,7 @@ module.exports.run = async (client, message, args) => {
                                              .setTitle("Bedankt voor het solliciteren")
                                              .setColor("#00FF00")
                                              .setTimestamp()
-                                             .setDescription(`**wat is je roblox naam**: \n${antwoord0}\n\n**hoe oud ben je?**: \n${antwoord1}\n\n**ben je bekend met admin?**: \n${antwoord2}\n\n**wat is AA**: \n${antwoord3}\n\n**wat doe je als je een HR ziet abusen?**:\n${antwoord4}\n\n**wat doe je als je een HC ziet abusen?**: \n${antwoord5}\n\n**wat doe je als er een hacker in de game zit?**: \n${antwoord6}\n\n**welke eenheid wil je? (DSI/Ambulance/politie/Brandweer/Kmar)**\n${antwoord7}\n\n**wat is je motivatie [50woorden]**\n${antwoord8}\n\n**hoe actief ben jij op een schaal van 1 tot 10?**\n${antwoord9}\n\n**moeten wij nog iets van je weten?**\n${antwoord10}`)
+                                             .setDescription(`**wat is je roblox naam**: \n${antwoord0}\n\n**hoe oud ben je?**: \n${antwoord1}\n\n**ben je bekend met admin?**: \n${antwoord2}\n\n**wat is AA**: \n${antwoord3}\n\n**wat doe je als je een HR ziet abusen?**:\n${antwoord4}\n\n**wat doe je als je een HC ziet abusen?**: \n${antwoord5}\n\n**wat doe je als er een hacker in de game zit?**: \n${antwoord6}\n\n**welke eenheid wil je? (DSI/Ambulance/politie/Brandweer/Kmar/Defensie)**\n${antwoord7}\n\n**wat is je motivatie [50woorden]**\n${antwoord8}\n\n**hoe actief ben jij op een schaal van 1 tot 10?**\n${antwoord9}\n\n**moeten wij nog iets van je weten?**\n${antwoord10}`)
                                          
      
                                              settedParent.bulkDelete(22).then(
