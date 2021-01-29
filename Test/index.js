@@ -44,7 +44,7 @@ const readCommands = (dir) => {
     }
   })
 
-client.login(botConfig.token)
+client.login(procces.env.token)
 
 
 

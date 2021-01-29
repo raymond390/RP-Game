@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) => {
             if (channel.name == userName.toLowerCase()) {
                 ticketBestaat = true;
     
-                message.reply("Je hebt al een ticket aangemaakt");
+                message.reply("Je hebt al een Sollicitatie Gemaakt aangemaakt");
     
                 return;
             }
