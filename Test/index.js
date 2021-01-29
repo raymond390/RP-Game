@@ -9,6 +9,7 @@ const baseFile = 'command-base.js'
 const poll = require('./features/poll')
 const scaling = require('./features/scaling-channels')
 const commandBase = require('./command/command-base')
+const loadCommands = require('./commands/load-commands')
 //  Command handler
 const fs = require("fs");
 const { isFunction } = require("util");
