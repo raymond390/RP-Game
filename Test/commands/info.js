@@ -14,7 +14,8 @@ module.exports.run = async (client, message, args) => {
             .setTimestamp()
             .setFooter('', '');
 
-        return message.channel.send(botEmbed);
+            var botEmbed = await message.channel.send(botEmbed);
+            embedSend.react("🎉");
 
 }
 
