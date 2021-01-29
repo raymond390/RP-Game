@@ -1,5 +1,5 @@
 const discord = require("discord.js");
-const check = "👌"
+
 module.exports.run = async (client, message, args) => {
 
     var botEmbed = new discord.MessageEmbed()
@@ -14,9 +14,8 @@ module.exports.run = async (client, message, args) => {
             .setTimestamp()
             .setFooter('', '');
 
-             message.channel.send(botEmbed);
-             then((ticketMessage) => {
-                ticketMessage.react(check)
+            var botEmbed = await message.channel.send(botEmbed);
+            embedSend.react("🎉");
 
 }
 
