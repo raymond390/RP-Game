@@ -139,10 +139,10 @@ client.on("guildMemberRemove", member => {
 
 
 const activities_list = [
-    "Maastricht V2", 
-    ".help",
-    "Maastricht V2", 
-    ".help"
+    "Zoetermeer", 
+    "!help",
+    "zoetermeer", 
+    "!help"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
     
     client.on('ready', () => {

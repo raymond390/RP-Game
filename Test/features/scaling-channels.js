@@ -1,4 +1,4 @@
-const channelName = 'test'
+const channelName = '🔒|Private'
 
 const getVoiceChannels = (guild) => {
   return guild.channels.cache.filter((channel) => {
