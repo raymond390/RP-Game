@@ -1,4 +1,4 @@
-const db = require('../../models/warns')
+const db = require('./warn')
 const { Message, MessageEmbed } = require('discord.js')
 
 const discord = require("discord.js");
