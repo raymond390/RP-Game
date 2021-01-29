@@ -4,14 +4,14 @@ module.exports.run = async (client, message, args) => {
 
 
     
-        const categoryID = "799628426172563467";
+        const categoryID = "";
         var staff = "790291727889858570";
         var person = message.author;
 
         var userName = message.author.username;
         var userDiscriminator = message.author.discriminator;
     
-        var ticketBestaat = false;
+        var ticketBestaat = true;
     
         message.guild.channels.cache.forEach(channel => {
     
@@ -185,11 +185,11 @@ module.exports.run = async (client, message, args) => {
                     }
                     
                 ).catch(err => {
-                    message.channel.send("Er is iets misgelopen");
+                    message.channel.send("De sollicitaties zijn dicht");
                 });
             }
         ).catch(err => {
-            message.channel.send("Er is iets misgelopen");
+            message.channel.send("De sollicitaties zijn dicht");
         });
     }
     
