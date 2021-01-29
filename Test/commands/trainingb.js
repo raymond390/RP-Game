@@ -1,6 +1,6 @@
 
 const discord = require("discord.js");
-
+const check = '✅'
 module.exports.run = async (client, message, args) => {
 
     if (!message.member.hasPermission("MANAGE_EMOJIS")) return message.reply("sorry jij kan dit niet");
@@ -43,7 +43,11 @@ module.exports.run = async (client, message, args) => {
 
     if (!channel) return
 
-    channel.send(botEmbed);
+    channel.send(botEmbed)
+    .then((ticketMessage) => {
+        ticketMessage.react(check)
+    })
+
 }
 
 module.exports.help = {
