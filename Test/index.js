@@ -17,7 +17,6 @@ const { isFunction } = require("util");
 const client = new discord.Client();
 
 commandBase.loadPrefixes(client)
-commandBase(client)
 
 
 //  Command handler
