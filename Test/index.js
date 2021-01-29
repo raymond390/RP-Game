@@ -2,10 +2,12 @@ const discord = require("discord.js");
 const botConfig = require("./botconfig.json");
 const database = require("./database.json");
 const fetch = require("node-fetch");
-
-
+const mongo = require('./mongo')
+const messageCount = require('./features/message-counter')
 const activeSongs = new Map();
-
+const baseFile = 'command-base.js'
+const poll = require('./features/poll')
+const scaling = require('./features/scaling-channels')
 //  Command handler
 const fs = require("fs");
 const { isFunction } = require("util");
@@ -17,12 +19,37 @@ const client = new discord.Client();
 client.commands = new discord.Collection();
 
 
-client.login(process.env.token);
+const readCommands = (dir) => {
+    const files = fs.readdirSync(path.join(__dirname, dir))
+    for (const file of files) {
+      const stat = fs.lstatSync(path.join(__dirname, dir, file))
+      if (stat.isDirectory()) {
+        readCommands(path.join(dir, file))
+      } else if (file !== baseFile) {
+        const option = require(path.join(__dirname, dir, file))
+        commandBase(client, option)
+      }
+    }
+  }
+
+  messageCount(client)
+  poll(client)
+  scaling(client)
+
+ mongo().then((mongoose) => {
+    try {
+      console.log('Connected to mongo!')
+    } finally {
+      mongoose.connection.close()
+    }
+  })
+
+client.login(botConfig.token)
 
 
 
-//  Command handler
-fs.readdir("./commands/", (err, files) => {
+//  Command handlers
+fs.readdir("./commands", (err, files) => {
 
     if (err) console.log(err);
 
@@ -54,7 +81,8 @@ client.on("guildMemberAdd", member => {
 
     // member.roles.add(role);
 
-
+    
+	
     con.query(`SELECT IDRole FROM rollen WHERE IDUser = '${member.user.id}'`, (err, rows) => {
 
         if (err) throw err;
