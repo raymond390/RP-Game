@@ -8,7 +8,7 @@ const activeSongs = new Map();
 const poll = require('./features/poll')
 const scaling = require('./features/scaling-channels')
 const path = require('path')
-const memeber = require('./member-count')
+
 //  Command handler
 const fs = require("fs");
 const { isFunction } = require("util");
