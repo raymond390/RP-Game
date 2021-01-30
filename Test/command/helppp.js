@@ -28,10 +28,12 @@ module.exports.run = async (client, message, args) => {
         {
           name: 'Field 4',
           value: 'Hello world',
+          inline: true
         },
         {
-            name: 'Field 4',
-            value: 'Hello world',
+          name: 'Field 5',
+          value: 'Hello world',
+          inline: true
             
         }
         
