@@ -23,7 +23,7 @@ client.commands = new discord.Collection();
 
 
 const baseFile = 'command-base.js'
-const commandBase = require(`./command/${baseFile}`)
+const commandBase = require(`./commands/${baseFile}`)
 
 const readCommands = (dir) => {
   const files = fs.readdirSync(path.join(__dirname, dir))
