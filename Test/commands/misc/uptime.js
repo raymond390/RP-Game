@@ -1,7 +1,6 @@
 module.exports = {
     commands: 'aa',
     minArgs: 2,
-    expectedArgs: "<Target user's @> <reason>",
     requiredRoles: ['Moderator'],
     callback: async (message, arguments) => {
 let seconds = Math.floor(message.client.uptime / 1000);
