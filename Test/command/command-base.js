@@ -73,7 +73,7 @@ module.exports = (client, commandOptions) => {
     commands = [commands]
   }
 
-  console.log
+  
 
   // Ensure the permissions are in an array and are all valid
   if (permissions.length) {
