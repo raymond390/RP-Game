@@ -7,7 +7,7 @@ const messageCount = require('./features/message-counter')
 const activeSongs = new Map();
 const poll = require('./features/poll')
 const scaling = require('./features/scaling-channels')
-const commandBase = require('./command/command-base')
+
 
 //  Command handler
 const fs = require("fs");
