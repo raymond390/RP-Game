@@ -1,10 +1,3 @@
-/**
- * NOTE:
- *  Some parts of this code have been improved since the original command base video.
- *  This file should still work as expected, however if you are learning the inner workings of
- *  this file then expect the file to be slightly different than in the video.
- */
-
 const { prefix } = require('../botconfig.json')
 
 const validatePermissions = (permissions) => {
@@ -66,7 +59,7 @@ module.exports = (client, commandOptions) => {
     commands = [commands]
   }
 
-
+  console.log(`Registering command "${commands[1]}"`)
 
   // Ensure the permissions are in an array and are all valid
   if (permissions.length) {
@@ -81,7 +74,7 @@ module.exports = (client, commandOptions) => {
   client.on('message', (message) => {
     const { member, content, guild } = message
 
-    for (const of alias) {
+    for (const alias of commands) {
       const command = `${prefix}${alias.toLowerCase()}`
 
       if (
