@@ -34,7 +34,7 @@ module.exports = {
     const newBalance = await economy.addCoins(guild.id, target.id, coinsToGive)
 
     message.reply(
-      `Je hebt gegeven <@${target.id}> ${coinsToGive} coins! Hiij heeft nu ${newBalance} coins en jij hebt ${remainingCoins} coins!`
+      `Je hebt  <@${target.id}> ${coinsToGive} coins! Hiij heeft nu ${newBalance} coins en jij hebt ${remainingCoins} coins!`
     )
   },
 }

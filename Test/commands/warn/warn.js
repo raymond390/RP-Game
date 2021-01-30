@@ -6,7 +6,7 @@ module.exports = {
   commands: 'warn',
   minArgs: 2,
   expectedArgs: "<Target user's @> <reason>",
-  requiredRoles: ['Moderator'],
+  requiredRoles: ['Support Team'],
   callback: async (message, arguments) => {
     const target = message.mentions.users.first()
     if (!target) {
