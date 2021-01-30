@@ -6,7 +6,7 @@ const member = guild.members.cache.get(user.id)
 
 console.log(member)
 
-const embed = new MessageEmbed()
+var userinfo = new discord.MessageEmbed()
   .setAuthor(`User info for ${user.username}`, user.displayAvatarURL())
   .addFields(
     {
