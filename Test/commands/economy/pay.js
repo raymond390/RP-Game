@@ -10,19 +10,19 @@ module.exports = {
 
     const target = message.mentions.users.first()
     if (!target) {
-      message.reply('Please specify someone to give coins to.')
+      message.reply('Geef iemand op om munten aan te geven.')
       return
     }
 
     const coinsToGive = arguments[1]
     if (isNaN(coinsToGive)) {
-      message.reply('Please provide a valid number of coins to give.')
+      message.reply('Geef een geldig aantal munten op om te geven.')
       return
     }
 
     const coinsOwned = await economy.getCoins(guild.id, member.id)
     if (coinsOwned < coinsToGive) {
-      message.reply(`You do not have ${coinsToGive} coins!`)
+      message.reply(`je hebt geen ${coinsToGive} coins!`)
       return
     }
 
@@ -34,7 +34,7 @@ module.exports = {
     const newBalance = await economy.addCoins(guild.id, target.id, coinsToGive)
 
     message.reply(
-      `You have given <@${target.id}> ${coinsToGive} coins! They now have ${newBalance} coins and you have ${remainingCoins} coins!`
+      `Je hebt gegeven <@${target.id}> ${coinsToGive} coins! Hiij heeft nu ${newBalance} coins en jij hebt ${remainingCoins} coins!`
     )
   },
 }
