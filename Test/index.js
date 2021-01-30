@@ -5,7 +5,6 @@ const fetch = require("node-fetch");
 const mongo = require('./mongo')
 const messageCount = require('./features/message-counter')
 const activeSongs = new Map();
-const baseFile = 'command-base.js'
 const poll = require('./features/poll')
 const scaling = require('./features/scaling-channels')
 const commandBase = require('./command/command-base')
