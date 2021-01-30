@@ -56,7 +56,7 @@ const baseFile = 'command-base.js'
 
 client.login(process.env.token)
 
-commandBase.loadPrefixes(client)
+
 
 //  Command handlers
 fs.readdir("./commands", (err, files) => {
