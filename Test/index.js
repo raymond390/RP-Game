@@ -23,7 +23,10 @@ commandBase.loadPrefixes(client)
 client.commands = new discord.Collection();
 
 
-const readCommands = (dir) => {
+const baseFile = 'command-base.js'
+  const commandBase = require(`./command/${baseFile}`)
+
+  const readCommands = (dir) => {
     const files = fs.readdirSync(path.join(__dirname, dir))
     for (const file of files) {
       const stat = fs.lstatSync(path.join(__dirname, dir, file))
@@ -35,6 +38,8 @@ const readCommands = (dir) => {
       }
     }
   }
+
+  readCommands('command')
 
   messageCount(client)
   poll(client)
@@ -104,7 +109,7 @@ client.on("guildMemberAdd", member => {
     });
 
 
-    var channel = member.guild.channels.cache.get('784428322838937690');
+    var channel = member.guild.channels.cache.get('804692324076617749');
 
     if (!channel) return;
 
@@ -123,7 +128,7 @@ client.on("guildMemberAdd", member => {
 
 client.on("guildMemberRemove", member => {
 
-    var channel = member.guild.channels.cache.get('778300362607951912');
+    var channel = member.guild.channels.cache.get('804692324076617749');
 
     if (!channel) return;
 
