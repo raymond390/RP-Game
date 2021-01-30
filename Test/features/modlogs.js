@@ -1,7 +1,7 @@
 const roles = ['Moderator']
 
 module.exports = (client) => {
-  const channelId = '738788649113747568'
+  const channelId = '757998148969824379'
 
   client.on('message', (message) => {
     const { guild, content, member } = message
