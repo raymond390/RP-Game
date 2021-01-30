@@ -73,7 +73,7 @@ fs.readdir("./commands", (err, files) => {
 
     jsFiles.forEach((f, i) => {
 
-        var fileGet = require(`./commands/${f}`);
+        var fileGet = require(`./command/${f}`);
         console.log(`De file ${f} is geladen`);
 
         client.commands.set(fileGet.help.name, fileGet);
