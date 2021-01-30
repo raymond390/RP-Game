@@ -1,4 +1,4 @@
-const mongo = require('./mongo')
+const mongo = require('../mongo')
 const profileSchema = require('./schemas/profile-schema')
 
 const coinsCache = {} // { 'guildId-userId': coins }
