@@ -1,8 +1,8 @@
 module.exports = {
-    commands: 'aa',
-    minArgs: 2,
-    requiredRoles: ['Moderator'],
-    callback: async (message, arguments) => {
+    commands: 'uptime',
+    minArgs: 0,
+    maxArgs: 0,
+    callback: (message, arguments, text) => {
 let seconds = Math.floor(message.client.uptime / 1000);
 let minutes = Math.floor(seconds / 60);
 let hours = Math.floor(minutes / 60);
