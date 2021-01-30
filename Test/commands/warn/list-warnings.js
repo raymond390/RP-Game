@@ -23,14 +23,14 @@ module.exports = {
           userId,
         })
 
-        let reply = `Previous warnings for <@${userId}>:\n\n`
+        let reply = `Warns <@${userId}>:\n\n`
 
         for (const warning of results.warnings) {
           const { author, timestamp, reason } = warning
 
-          reply += `By ${author} on ${new Date(
+          reply += `Bij ${author} op ${new Date(
             timestamp
-          ).toLocaleDateString()} for "${reason}"\n\n`
+          ).toLocaleDateString()} voor "${reason}"\n\n`
         }
 
         message.reply(reply)
