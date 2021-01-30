@@ -36,9 +36,11 @@ const baseFile = 'command-base.js'
         commandBase(client, option)
       }
     }
+
+    readCommands('command')
   }
 
-  readCommands('command')
+  
 
   messageCount(client)
   poll(client)
