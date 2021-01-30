@@ -96,7 +96,7 @@ client.on("guildMemberAdd", member => {
 
     var joinEmbed = new discord.MessageEmbed()
         .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
-        .setDescription(`Hoi ${member.user.username}, **Welkom op de server**`)
+        .setDescription(`Hoi ${member.user.username}, **Welkom in Zoetermeer**`)
         .setColor("#00FF00")
         .setFooter("Gebruiker gejoined")
         .setTimestamp();
