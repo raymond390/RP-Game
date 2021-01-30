@@ -1,4 +1,7 @@
+const discord = require("discord.js");
+const check = '✅'
 module.exports.run = async (client, message, args) => {
+
     const { guild, channel } = message
 
 const user = message.mentions.users.first() || message.member.user
@@ -35,9 +38,9 @@ var userinfo = new discord.MessageEmbed()
     }
   )
 
-channel.send(embed)
+  return message.channel.send(userinfo)
+
 }
- 
 
 module.exports.help = {
     name: "userinfo",
