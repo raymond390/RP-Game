@@ -1,7 +1,7 @@
 const discord = require("discord.js");
-
+const check = '✅'
 module.exports.run = async (client, message, args) => {
-    const check = '✅'
+ 
 
     var botEmbed = new discord.MessageEmbed()
       .setTitle('Example text embed')
