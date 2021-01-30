@@ -15,7 +15,7 @@ const { isFunction } = require("util");
 
 const client = new discord.Client();
 
-commandBase.loadPrefixes(client)
+
 
 
 //  Command handler
@@ -54,7 +54,7 @@ const baseFile = 'command-base.js'
 
 client.login(process.env.token)
 
-
+commandBase.loadPrefixes(client)
 
 //  Command handlers
 fs.readdir("./commands", (err, files) => {
