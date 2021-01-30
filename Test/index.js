@@ -60,7 +60,7 @@ client.login(process.env.token)
 
 
 //  Command handlers
-fs.readdir("./commands", (err, files) => {
+fs.readdir("./command", (err, files) => {
 
     if (err) console.log(err);
 
