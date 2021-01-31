@@ -93,21 +93,7 @@ client.on("guildMemberAdd", member => {
 
      member.roles.add(role);
 
-     con.query(`SELECT IDRole FROM rollen WHERE IDUser = '${member.user.id}'`, (err, rows) => {
-
-        if (err) throw err;
-
-        if (rows.length > 0) {
-
-            for (let index = 0; index < rows.length; index++) {
-                const role = rows[index];
-
-                member.roles.add(role.IDRole);
-            }
-
-        }
-
-    });
+    
 
 
     var channel = member.guild.channels.cache.get('804692324076617749');
