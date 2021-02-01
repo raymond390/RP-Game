@@ -1,9 +1,11 @@
 const discord = require("discord.js");
-const moment = require(`moment`)
+const moment = require(`moment`) // requiring moment
+
 module.exports.run = async (client, message, args) => {
     var botEmbed = new discord.MessageEmbed() // creates a embed that we gonna call botEmbed
     .setColor(`RANDOM`) // will set the color for the embed
     .setTitle(`Bot's Info`) // make the title for the cmd
+    .setThumbnail(Client.user.displayAvatarURL()) // it will put the bot avatar (pfp) in the embed
     .addField(`**General**`, [ // say general then...
         `**Bot naam:** ${Client.user.username}`, // this will be the username of the bot
         `**Tag:** ${Client.user.tag}`, // the actual name for the bot
@@ -19,7 +21,7 @@ module.exports.run = async (client, message, args) => {
         `**Discord.js Version:** 12.5.1`, // the discord.js modules version
         `**Node.js Version:** 1.0.0` // node.js version
     ])
-    return message.channel.send(botEmbed) // it sends the embed
+    return message.channel.send(botEmbed)
 }
 
 module.exports.help = {
