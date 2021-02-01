@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
     // the country = =covid country
 
      // if there is no country provided it sends this embed
-    const noArgs = new Discord.MessageEmbed()
+     var botEmbed = new discord.MessageEmbed()
     .setTitle('Invalid Command Usage')
     .setColor(0xFF0000)
     .setDescription('You Can Try Using **=covid all** or **=covid Canada**')
@@ -62,7 +62,7 @@ module.exports.run = async (client, message, args) => {
             .addField('Recovered', recovered)
             .addField('Deaths', deaths)
 
-            message.channel.send(embed)
+            return message.channel.send(botEmbed)
         }).catch(e => {
             // if he can't find the country that u said it will send this message
             return message.channel.send('Invalid country provided')
