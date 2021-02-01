@@ -1,5 +1,5 @@
 const discord = require("discord.js");
-
+const moment = require(`moment`)
 module.exports.run = async (client, message, args) => {
     var botEmbed = new discord.MessageEmbed() // creates a embed that we gonna call botEmbed
     .setColor(`RANDOM`) // will set the color for the embed
