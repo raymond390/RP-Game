@@ -1,6 +1,5 @@
 const discord = require("discord.js");
 
-module.exports.run = async (client, message, args) => {
    // setting all the verifiaction levels so it looks nice
 const verificationLevels = {
     NONE: 'None',
@@ -28,8 +27,7 @@ const regions = {
     'us-south': 'US South'
 }
 
-module.exports.run = async (Client, message, args, prefix) => { // cmd handler
-    if(!message.content.startsWith(prefix)) return; // it makes sure that the cmd starts with the prefix
+module.exports.run = async (client, message, args) => {
     
     // getting all the roles of the server
     const roles = message.guild.roles.cache.sort((a, b) => b.position - a.position).map(role => role.toString()).slice(0, -1)
@@ -65,22 +63,22 @@ module.exports.run = async (Client, message, args, prefix) => { // cmd handler
     const icon = guild.iconURL()
 
     // create an embed
-    var serverEmbed = new discord.MessageEmbed()
+    var botEmbed = new discord.MessageEmbed()
     .setColor("RANDOM") //sets the color
     
     // sets the title of the embed
-    .setTitle(`Server info of ${name}`)
+    .setTitle(`Server info  ${name}`)
     
     // sets the pic of the embed to the server's pfp
     .setImage(message.guild.iconURL())
     
     // adding a field with the general info
     .addField(`General`, [
-        `**Name:** ${name}`, // server name
+        `**Naam:** ${name}`, // server name
         `**ID:** ${message.guild.id}`, // server's id
         `**Owner:** ${message.guild.owner.user.tag}`, // server's owner
-        `**Region:** ${regions[message.guild.region]}`, // the region of the server
-        `**Boost Tier:** ${message.guild.premiumTier ? `Tier ${message.guild.premiumTier}` : 'None'}`, // boost tier
+        `**Regio:** ${regions[message.guild.region]}`, // the region of the server
+        `**Boost :** ${message.guild.premiumTier ? `Tier ${message.guild.premiumTier}` : 'None'}`, // boost tier
         `**Verification Level:** ${verificationLevels[message.guild.verificationLevel]}`, // the verification level
         `**Boost Level:** ${message.guild.premiumSubscriptionCount || '0'}`, // how many times it got boosted
         `**Created At:** ${moment(message.guild.createdTimestamp).format('LT')} ${moment(message.guild.createdTimestamp).format('LL')} ${moment(message.guild.createdTimestamp).fromNow()}`, // when did the server got created 
@@ -109,8 +107,7 @@ module.exports.run = async (Client, message, args, prefix) => { // cmd handler
     .addField(`Roles [${roles.length - 1}]`, rolesdisplay)
     
     // sending the embed
-    message.channel.send(serverEmbed)
-}
+    return message.channel.send(botEmbed)
 }
 module.exports.help = {
     name: "serverinfo",
