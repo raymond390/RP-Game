@@ -1,12 +1,13 @@
+
 const discord = require("discord.js");
-const api = require('covidapi')
-// install the covid package
-const fetch = require('node-fetch');
-// installing the package to the fetch links
 
-module.exports.run = async (client, message, args) => {
 
- 
+module.exports.run = async (client, message, argument) => {
+
+    const api = require('covidapi')
+    // install the covid package
+    const fetch = require('node-fetch');
+    // installing the package to the fetch links
 
 
     let countries = args.join(" ");
