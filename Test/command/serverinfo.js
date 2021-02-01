@@ -79,7 +79,7 @@ module.exports.run = async (client, message, args) => {
         `**Owner:** ${message.guild.owner.user.tag}`, // server's owner
         `**Regio:** ${regions[message.guild.region]}`, // the region of the server
         `**Boost :** ${message.guild.premiumTier ? `Tier ${message.guild.premiumTier}` : 'None'}`, // boost tier
-        `**Verification Level:** ${verificationLevels[message.guild.verificationLevel]}`, // the verification leve
+        `**Verificatie Level:** ${verificationLevels[message.guild.verificationLevel]}`, // the verification leve
      
     ])
     
