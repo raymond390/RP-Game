@@ -81,7 +81,6 @@ module.exports.run = async (client, message, args) => {
         `**Boost :** ${message.guild.premiumTier ? `Tier ${message.guild.premiumTier}` : 'None'}`, // boost tier
         `**Verification Level:** ${verificationLevels[message.guild.verificationLevel]}`, // the verification leve
         `**Created At:** ${moment(message.guild.createdTimestamp).format('LT')} ${moment(message.guild.createdTimestamp).format('LL')} ${moment(message.guild.createdTimestamp).fromNow()}`, // when did the server got created 
-        '\u200b'
     ])
     
     // adding a field with the stats info
