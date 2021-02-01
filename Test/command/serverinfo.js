@@ -79,8 +79,7 @@ module.exports.run = async (client, message, args) => {
         `**Owner:** ${message.guild.owner.user.tag}`, // server's owner
         `**Regio:** ${regions[message.guild.region]}`, // the region of the server
         `**Boost :** ${message.guild.premiumTier ? `Tier ${message.guild.premiumTier}` : 'None'}`, // boost tier
-        `**Verification Level:** ${verificationLevels[message.guild.verificationLevel]}`, // the verification level
-        `**Boost Level:** ${message.guild.premiumSubscriptionCount || '0'}`, // how many times it got boosted
+        `**Verification Level:** ${verificationLevels[message.guild.verificationLevel]}`, // the verification leve
         `**Created At:** ${moment(message.guild.createdTimestamp).format('LT')} ${moment(message.guild.createdTimestamp).format('LL')} ${moment(message.guild.createdTimestamp).fromNow()}`, // when did the server got created 
         '\u200b'
     ])
