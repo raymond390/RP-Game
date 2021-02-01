@@ -85,24 +85,24 @@ module.exports.run = async (client, message, args) => {
     
     // adding a field with the stats info
     .addField('Stats', [
-        `**Role Count:** ${roles.length}`, // how many roles in the server
-        `**Emoji Count:** ${emojis.size}`, // how many emojis
-        `**Normal Emoji Count:** ${emojis.filter(emoji => !emoji.animated).size}`, // how many not animated emojis
-        `**Animated Emoji Count:** ${emojis.filter(emoji => emoji.animated).size}`, // how many animated emoji
-        `**Member Count:** ${message.guild.memberCount}`, // how many members in the server
-        `**Humans:** ${members.filter(member => !member.user.bot).size}`, // how many are humans
+        `**Aantal rollen:** ${roles.length}`, // how many roles in the server
+        `**Aantal emojis:** ${emojis.size}`, // how many emojis
+        `**Aantal niet Geanimeerde Emoji's :** ${emojis.filter(emoji => !emoji.animated).size}`, // how many not animated emojis
+        `**Aantal Geanimeerde Emoji's:** ${emojis.filter(emoji => emoji.animated).size}`, // how many animated emoji
+        `**Aantal Members:** ${message.guild.memberCount}`, // how many members in the server
+        `**Mensen:** ${members.filter(member => !member.user.bot).size}`, // how many are humans
         `**Bots:** ${members.filter(member => member.user.bot).size}`, // how many are bots
         `**Online:** ${members.filter(member => member.presence.status === 'online').size}`, // how many are online
         `**Offline:** ${members.filter(member => member.presence.status === 'offline').size}`, // how many are offline
-        `**Do Not Disturb:** ${members.filter(member => member.presence.status === 'dnd').size}`, // how many have DND
-        `**Idle:** ${members.filter(member => member.presence.status === 'idle').size}`, // how many have idle
+        `**Niet storen:** ${members.filter(member => member.presence.status === 'dnd').size}`, // how many have DND
+        `**Slaap stand:** ${members.filter(member => member.presence.status === 'idle').size}`, // how many have idle
         `**Text Channels:** ${channels.filter(channel => channel.type === 'text').size}`, // how many text channels
         `**Voice Channels:** ${channels.filter(channel => channel.type === 'voice').size}`, // how many voice channels
         '\u200b'
     ])
     
     // adding another field displaying the roles in it
-    .addField(`Roles [${roles.length - 1}]`, rolesdisplay)
+    .addField(`Rollen [${roles.length - 1}]`, rolesdisplay)
     
     // sending the embed
     return message.channel.send(botEmbed)
