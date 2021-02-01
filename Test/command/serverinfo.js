@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     .setColor("RANDOM")
     .setTitle("Server Info")
     .setImage(message.guild.iconURL)
-    .setDescription(`${message.guild}'s information`)
+    .setDescription(`${message.guild}'s informatie`)
     .addField("Owner", `De creator van deze server is ${message.guild.owner}`)
     .addField("Aantal leden", `Deze server heeft ${message.guild.memberCount} leden`)
     .addField("Aantal emojis", `Deze server heeft ${message.guild.emojis.cache.size} emojis`)
