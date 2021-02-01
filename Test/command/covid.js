@@ -10,7 +10,6 @@ module.exports.run = async (client, message, argument) => {
     // installing the package to the fetch links
 
 
-    let countries = args.join(" ");
     // the country = =covid country
 
      // if there is no country provided it sends this embed
