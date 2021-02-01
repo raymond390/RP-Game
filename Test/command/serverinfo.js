@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
     .addField("Owner", `De creator van deze server is ${message.guild.owner}`)
     .addField("Aantal leden", `Deze server heeft ${message.guild.memberCount} leden`)
     .addField("Aantal emojis", `Deze server heeft ${message.guild.emojis.cache.size} emojis`)
-    .addField("Aantal rollen", `Deze server heeft ${message.guild.roles.cache.size} rollem`)
+    .addField("Aantal rollen", `Deze server heeft ${message.guild.roles.cache.size} rollen`)
     
 
     return message.channel.send(botEmbed)
