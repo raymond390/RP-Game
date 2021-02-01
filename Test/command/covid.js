@@ -6,7 +6,7 @@ const fetch = require('node-fetch');
 
 module.exports.run = async (client, message, args) => {
 
-    if(!message.content.startsWith(prefix)) return;
+ 
 
 
     let countries = args.join(" ");
