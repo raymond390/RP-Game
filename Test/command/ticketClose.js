@@ -4,7 +4,7 @@ module.exports.run = async (client, message, args) => {
     if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("sorry jij kan dit niet");
 
     if (!message.guild.me.hasPermission("KICK_MEMBERS")) return message.reply("Geen perms");
-
+    const check = '✅'
     var opmerking = args.slice(0).join(" ");
 
     const categoryID = "804717995569446942";
@@ -18,14 +18,17 @@ module.exports.run = async (client, message, args) => {
         // Create embed.
         var embedCreateTicket = new discord.MessageEmbed()
             .setTitle("Ticket, " + message.channel.name)
-            .setDescription(`Gesloten door ${message.author}\n **Opmerkingen\n${opmerking} `)
+            .setDescription(`Gesloten **door** ${message.author}\n **Opmerkingen**\n${opmerking} `)
             .setFooter("Ticket gesloten");
 
         // Channel voor logging
         var ticketChannel = message.member.guild.channels.cache.find(channel => channel.name === "『🔒』staff-logs");
         if (!ticketChannel) return message.reply("Kanaal bestaat niet");
 
-        ticketChannel.send(embedCreateTicket);
+        ticketChannel.send(embedCreateTicket)
+        .then((ticketMessage) => {
+            ticketMessage.react(check)
+        })
 
     } else {
 
