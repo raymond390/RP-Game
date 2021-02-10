@@ -7,6 +7,10 @@ module.exports.run = async (client, message, args) => {
     var opmerking = args.slice(0).join(" ");
 
     if (!args[0]) return message.reply("Geen suggestie gegeven");
+    const categoryID = "806170684979544114";
+
+   
+    if (message.channel.parentID == categoryID) {
 
         // Create embed.
         var embedCreateTicket = new discord.MessageEmbed()
@@ -29,7 +33,7 @@ module.exports.run = async (client, message, args) => {
         })
 
 
-
+    }
 
 
 }
