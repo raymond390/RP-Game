@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
     const uncheck = '👎'
     var opmerking = args.slice(0).join(" ");
 
-   
+    if (!args[0]) return message.reply("Geen suggestie gegeven");
 
         // Create embed.
         var embedCreateTicket = new discord.MessageEmbed()
@@ -36,6 +36,6 @@ module.exports.run = async (client, message, args) => {
 
 module.exports.help = {
     name: "suggestie",
-    category: "Algemeen",
-    description: "closed een ticket",
+    category: "Informatie",
+    description: "Geef een suggestie",
 }
