@@ -4,15 +4,15 @@ module.exports.run = async (client, message, args) => {
  
 
     var botEmbed = new discord.MessageEmbed()
-      .setTitle('Example text embed')
+      .setTitle('Help commands')
       .setURL('https://www.youtube.com/channel/UChPrh75CmPP9Ig6jISPnfNA')
       .setAuthor(message.author.username)
-      .setFooter('This is a footer')
+      .setFooter('Help')
       .setColor('#00AAFF')
       .addFields(
         {
-          name: 'Field 1',
-          value: 'Hello world',
+          name: 'Moderation',
+          value: '!help',
           inline: true,
         },
         {
