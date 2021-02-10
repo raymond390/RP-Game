@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
     var opmerking = args.slice(0).join(" ");
 
     if (!args[0]) return message.reply("Geen suggestie gegeven");
-    const categoryID = "806170684979544114";
+    const categoryID = "804691526868533269";
 
    
     if (message.channel.parentID == categoryID) {
