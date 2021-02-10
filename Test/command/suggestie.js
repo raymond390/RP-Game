@@ -5,13 +5,14 @@ module.exports.run = async (client, message, args) => {
     const check = '👍'
     const uncheck = '👎'
     var opmerking = args.slice(0).join(" ");
-
+    const user = message.mentions.users.first() || message.member.user
+    
     if (!args[0]) return message.reply("Geen suggestie gegeven");
     
 
         // Create embed.
         var embedCreateTicket = new discord.MessageEmbed()
-            .setAuthor(message.author.username)
+            .setAuthor(`${user.username}`, user.displayAvatarURL())
             .setTitle("Suggestie")
             .setDescription(`${opmerking}`)
             .setFooter("Suggestie")
