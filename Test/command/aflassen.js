@@ -24,7 +24,7 @@ module.exports.run = async (client, message, args) => {
         {name:" **Host **" , value:`${message.author}`},
         {name:" **Dienst **" , value: (dienst) },
         {name:" **Datum **" , value: (datum) },
-        {name:" **Co-Host **" , value: (tijd) },
+        {name:" **Tijd **" , value: (tijd) },
         {name:" **Opmerking **" , value:` ${opmerking}`},
                 
     )
