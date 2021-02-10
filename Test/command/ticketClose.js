@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) => {
         // Create embed.
         var embedCreateTicket = new discord.MessageEmbed()
             .setTitle("Ticket, " + message.channel.name)
-            .setDescription(`Gesloten **door** ${message.author}\n **Opmerkingen**\n${opmerking} `)
+            .setDescription(`Gesloten **door** ${message.author}\n\n **Opmerkingen**\n${opmerking} `)
             .setFooter("Ticket gesloten");
 
         // Channel voor logging
