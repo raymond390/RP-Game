@@ -28,7 +28,7 @@ module.exports.run = async (client, message, args) => {
         {name:" **Opmerking **" , value:` ${opmerking}`},
                 
     )
-    .setThumbnail('https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Insigne_du_Dienst_Speciale_Interventies_(DSI).svg/1200px-Insigne_du_Dienst_Speciale_Interventies_(DSI).svg.png')
+    .setThumbnail('')
     .setImage('')
     .setFooter('', '');
 
