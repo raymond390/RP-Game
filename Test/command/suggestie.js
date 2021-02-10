@@ -20,7 +20,7 @@ module.exports.run = async (client, message, args) => {
             
 
         // Channel voor logging
-        var ticketChannel = message.member.guild.channels.cache.find(channel => channel.name === "『👷』bot-testing");
+        var ticketChannel = message.member.guild.channels.cache.find(channel => channel.name === "suggesties");
 
         ticketChannel.send(embedCreateTicket)
         .then((ticketMessage) => {
