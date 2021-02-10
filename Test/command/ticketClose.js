@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
 
     if (!message.guild.me.hasPermission("KICK_MEMBERS")) return message.reply("Geen perms");
 
-    var opmerking = args.slice(1).join(" ");
+    var opmerking = args.slice(0).join(" ");
 
     const categoryID = "804717995569446942";
 
@@ -20,7 +20,7 @@ module.exports.run = async (client, message, args) => {
             .setTitle("Ticket, " + message.channel.name)
             .setDescription(`Gesloten door ${message.author} `)
             .addField(
-                {name:" **Opmerking **" , value:` ${opmerking}`},
+                {name:"**Opmerking **" , value:` ${opmerking}`},
             )
             .setFooter("Ticket gesloten");
 
