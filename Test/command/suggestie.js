@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) => {
 
         // Create embed.
         var embedCreateTicket = new discord.MessageEmbed()
-            .setTitle(message.author.displayAvatarURL)
+            .setTitle(displayAvatarURL)
             .setDescription(`${message.author}\n\n **Suggestie** \n ${opmerking} `)
             .setFooter("Suggestie")
             .setColor("#ed0909");
