@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
     const uncheck = '👎'
     var opmerking = args.slice(0).join(" ");
     const user = message.mentions.users.first() || message.member.user
-    
+
     if (!args[0]) return message.reply("Geen suggestie gegeven");
     
 
@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
             .setAuthor(`${user.username}`, user.displayAvatarURL())
             .setTitle("Suggestie")
             .setDescription(`${opmerking}`)
-            .setFooter("Suggestie")
+            .setFooter(`Suggestie ${user.username}`)
             .setColor("#ed0909");
             
             
