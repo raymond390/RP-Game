@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
             .setTitle(`${message.author}`)
             .setDescription(`**Suggestie** \n ${opmerking} `)
             .setFooter("Suggestie")
-            .setColor;
+            .setColor("#ed0909");
             
             
             
