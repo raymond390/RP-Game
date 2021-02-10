@@ -11,12 +11,15 @@ module.exports.run = async (client, message, args) => {
         // Create embed.
         var embedCreateTicket = new discord.MessageEmbed()
             .setTitle(`${message.author}`)
-            .setDescription(`**Suggestie** \n\n ${opmerking} `)
-            .setFooter("Suggestie");
+            .setDescription(`**Suggestie** \n ${opmerking} `)
+            .setFooter("Suggestie")
+            .setColor;
+            
+            
             
 
         // Channel voor logging
-        var ticketChannel = message.member.guild.channels.cache.find(channel => channel.name === "suggesties");
+        var ticketChannel = message.member.guild.channels.cache.find(channel => channel.name === "『👷』bot-testing");
 
         ticketChannel.send(embedCreateTicket)
         .then((ticketMessage) => {
