@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
     var opmerking = args.slice(0).join(" ");
     const user = message.mentions.users.first() || message.member.user
 
-    if (!args[0]) return message.reply("Geen suggestie gegeven");
+    if (!args[0]) return message.reply("Geen Bug gegeven");
     
 
         // Create embed.
